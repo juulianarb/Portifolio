@@ -1,0 +1,151 @@
+/* Reset css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+/* Parte da navegação */ 
+
+header {
+ /* background-color: aquamarine; */
+ border-bottom: 2px #000 dashed;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul li {
+  display: inline;
+  margin: 5px;
+  padding: 5px;
+  font-size: 25px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+ul li a:hover{
+  animation: coresdiferentes 5s infinite;
+}
+
+@keyframes coresdiferentes {
+  0% ,100%{
+    color: aqua;
+  }
+  25%, 75% {
+    color: yellow;
+  }
+  50% {
+    color: blueviolet;
+  }
+}
+
+/* Paragrafo Portifólio na navegação */
+
+.para-portfolio {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: "Sour Gummy", sans-serif;
+  cursor: default;
+}
+
+@keyframes paragrafo-animado {
+  0% ,100% {
+    font-size: 45px;
+    color: red;
+  }
+  25%, 75% {
+    font-size: 45px;
+    color: aqua;
+  }
+  50% {
+    font-size: 45px;
+    color: aquamarine;
+  }
+}
+ 
+
+/* Imagem icone da navegação */ 
+
+.icon-img {
+  border-radius: 50%;
+  border: 2px #000 solid;
+  margin: 5px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Texto animado no inicio da página */ 
+
+.txt-animado {
+  margin: 10px;
+  font-size: 45px;
+  font-weight: 300;
+}
+
+.txt-animado span {
+  position: relative;
+}
+
+.txt-animado span::before {
+  content: "";
+  color: aquamarine;
+  animation: palavras 20s infinite;
+}
+
+.txt-animado span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 2px solid aquamarine;
+  right: -10px;
+  animation: cursor .8s infinite, digita 20s steps(15) infinite;
+  width: calc(100% + 18px);
+  background-color: #fff;
+}
+
+@keyframes digita {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 18px);
+  }
+}
+
+@keyframes cursor {
+  0%{
+    border-left: 2px solid #fff;
+  }
+  
+}
+
+@keyframes palavras {
+  0%, 20%{
+    content: "Bem vindos a minha página pessoal";
+  }
+  21%, 40%{
+    content: "Meu nome é Juliana Rodrigues,";
+  }
+  41%, 60%{
+    content: "sou desenvolvedora full stack,";
+  }
+  61%,100% {
+    content: "conheçam meus projetos =)";
+  }
+}
+
+

@@ -1,0 +1,20 @@
+/* CSS */
+.para-portfolio {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: "Sour Gummy", sans-serif;
+    cursor: default;
+    display: inline-block;
+  }
+  
+  .para-portfolio span {
+    display: inline-block;
+    /* Estilização inicial */
+  }
+  
+  /* Efeito ao passar o mouse */
+  .p:hover {
+    font-size: 45px;
+    color: red;
+  }
+  
